@@ -14,7 +14,7 @@ public class JumpFunction : MonoBehaviour
 
     void Update()
     {
-        CharactersJump(); 
+        CharactersJump();
     }
 
     /// <summary>
@@ -27,9 +27,9 @@ public class JumpFunction : MonoBehaviour
             rb2d.gravityScale = jumpGravity;
             rb2d.velocity = Vector3.up * jumpPower;
         }
-        else if(!isGround)
+        else if(rb2d.velocity.y > 0)
         {
-            rb2d.gravityScale = 1f;
+            rb2d.gravityScale = 10f;
         }
     }
 

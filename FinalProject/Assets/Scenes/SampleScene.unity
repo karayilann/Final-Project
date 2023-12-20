@@ -378,8 +378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
-  jumpPower: 5
-  jumpGravity: 0.1
+  jumpPower: 25
+  jumpGravity: 2
   rb2d: {fileID: 1943017627}
 --- !u!50 &1943017627
 Rigidbody2D:
