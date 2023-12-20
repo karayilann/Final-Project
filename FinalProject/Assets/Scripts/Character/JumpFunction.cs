@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class JumpFunction : MonoBehaviour
 {
-    public float movementSpeed;
     public float jumpPower;
     public float jumpGravity;
 
@@ -22,7 +21,7 @@ public class JumpFunction : MonoBehaviour
     /// </summary>
     void CharactersJump()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGround) 
+        if(Input.GetKeyDown(KeyCode.W) && isGround) 
         {
             rb2d.gravityScale = jumpGravity;
             rb2d.velocity = Vector3.up * jumpPower;
