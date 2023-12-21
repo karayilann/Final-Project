@@ -48,17 +48,20 @@ public class Movement : MonoBehaviour
     }
 
     /// <summary>
-    /// Karakterin hareket etmesi için yazýlan kodlar.
+    /// Karakterin x ekseninde sol ok veya A tuþu ile sola; sað ok ile veya D tuþu ile saða doðru hareketi için yazdým.
     /// </summary>
-    private void CharactersMovement()
+    public void CharactersMovement()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime; // Time.deltaTime tüm bilgisayarlarda  ayný hýzda çalýþmasýný saðlar.
+
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            rb2d.velocity = Vector2.left * movementSpeed;
+            transform.Translate(horizontalMovement, 0, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            rb2d.velocity = Vector2.right * movementSpeed;
+            transform.Translate(horizontalMovement, 0, 0);
         }
     }
 
