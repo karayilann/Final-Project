@@ -52,7 +52,7 @@ public class SecondMovement : MonoBehaviour
     /// </summary>
     public void CharactersMovement()
     {
-        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime; // Time.deltaTime tüm bilgisayarlarda  ayný hýzda çalýþmasýný saðlar.
+        float horizontalMovement = Input.GetAxis("Horizontal2") * movementSpeed * Time.deltaTime; // Time.deltaTime tüm bilgisayarlarda  ayný hýzda çalýþmasýný saðlar.
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
