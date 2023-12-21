@@ -6,13 +6,21 @@ public class Movement : MonoBehaviour
 {
     public float jumpPower;
     public float jumpGravity;
+    public float fallGravity;
     public float movementSpeed;
+    [SerializeField] private Transform feetPos;
+    [SerializeField] private float radius;
+    [SerializeField] private LayerMask layerMask;
+    
 
-    public Rigidbody2D rb2d;
+     private Rigidbody2D rb2d;
 
-    bool isGround = false;
+    private void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
 
-    void FixedUpdate()
+    void Update()
     {
         CharactersJump();
         CharactersMovement();
@@ -23,14 +31,19 @@ public class Movement : MonoBehaviour
     /// </summary>
     void CharactersJump()
     {
-        if(Input.GetKeyDown(KeyCode.W) && isGround) 
+        if(Input.GetKeyDown(KeyCode.W) && IsGround()) 
+        {
+            
+            rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        }
+
+        if(rb2d.velocity.y >= 0)
         {
             rb2d.gravityScale = jumpGravity;
-            rb2d.velocity = Vector3.up * jumpPower;
         }
-        else if(rb2d.velocity.y > 0)
+        else if(rb2d.velocity.y < 0)
         {
-            rb2d.gravityScale = 5f;
+            rb2d.gravityScale = fallGravity;
         }
     }
 
@@ -51,20 +64,9 @@ public class Movement : MonoBehaviour
 
 
     #region Zemin Kontrol
-    private void OnCollisionEnter2D(Collision2D collision)
+    private bool IsGround()
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGround = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            isGround = false;
-        }
+        return Physics2D.OverlapCircle(feetPos.position, radius, layerMask);
     }
     #endregion
 
