@@ -52,17 +52,8 @@ public class Movement : MonoBehaviour
     /// </summary>
     public void CharactersMovement()
     {
-        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime; // Time.deltaTime tüm bilgisayarlarda  ayný hýzda çalýþmasýný saðlar.
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(horizontalMovement, 0, 0);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(horizontalMovement, 0, 0);
-        }
+        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime; // Time.deltaTime tüm bilgisayarlarda  ayný hýzda çalýþmasýný saðlar.     
+        transform.Translate(horizontalMovement, 0, 0);             
     }
 
 
