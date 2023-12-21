@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class SecondMovement : MonoBehaviour
 {
     public float jumpPower;
     public float jumpGravity;
@@ -11,9 +11,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform feetPos;
     [SerializeField] private float radius;
     [SerializeField] private LayerMask layerMask;
-    
 
-     private Rigidbody2D rb2d;
+
+    private Rigidbody2D rb2d;
 
     private void Start()
     {
@@ -31,17 +31,17 @@ public class Movement : MonoBehaviour
     /// </summary>
     void CharactersJump()
     {
-        if(Input.GetKeyDown(KeyCode.W) && IsGround()) 
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGround())
         {
-            
+
             rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
 
-        if(rb2d.velocity.y >= 0)
+        if (rb2d.velocity.y >= 0)
         {
             rb2d.gravityScale = jumpGravity;
         }
-        else if(rb2d.velocity.y < 0)
+        else if (rb2d.velocity.y < 0)
         {
             rb2d.gravityScale = fallGravity;
         }
@@ -54,12 +54,12 @@ public class Movement : MonoBehaviour
     {
         float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime; // Time.deltaTime tüm bilgisayarlarda  ayný hýzda çalýþmasýný saðlar.
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(horizontalMovement, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(horizontalMovement, 0, 0);
         }
@@ -72,6 +72,5 @@ public class Movement : MonoBehaviour
         return Physics2D.OverlapCircle(feetPos.position, radius, layerMask);
     }
     #endregion
-
 
 }
