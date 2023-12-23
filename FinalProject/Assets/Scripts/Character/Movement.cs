@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
         CharactersMovement();
     }
 
+
     /// <summary>
     /// Karakterin zýplama fonksiyonunu içerir.
     /// </summary>
