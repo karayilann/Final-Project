@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -13,17 +14,20 @@ public class Movement : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     
 
-     private Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
+    private Collider2D playerCollider;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
     }
 
     void Update()
     {
         CharactersJump();
         CharactersMovement();
+        GetDown();
     }
 
 
@@ -64,6 +68,21 @@ public class Movement : MonoBehaviour
         return Physics2D.OverlapCircle(feetPos.position, radius, layerMask);
     }
     #endregion
+
+   private void GetDown()
+    {
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            StartCoroutine("ColliderClose");
+        }
+    }
+
+    private IEnumerator ColliderClose()
+    {
+        playerCollider.isTrigger = true;
+        yield return new WaitForSeconds(0.1f);
+        playerCollider.isTrigger = false;
+    }
 
 
 }

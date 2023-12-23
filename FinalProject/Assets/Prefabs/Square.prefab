@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 7900331128085276300}
   - component: {fileID: 5682028718469602453}
   - component: {fileID: 5963640686309040930}
-  - component: {fileID: 7396097772149402758}
   - component: {fileID: 6443770649911089497}
   - component: {fileID: 1243891706406536528}
   m_Layer: 6
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,19 +114,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &7396097772149402758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6491581537941244726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d92abfdb021764e984a69e11affcd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgSpeed: 1
 --- !u!68 &6443770649911089497
 EdgeCollider2D:
   m_ObjectHideFlags: 0

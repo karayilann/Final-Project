@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class Spawner2 : MonoBehaviour
 {
     public GameObject platformPrefab;
 

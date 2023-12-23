@@ -14,16 +14,19 @@ public class SecondMovement : MonoBehaviour
 
 
     private Rigidbody2D rb2d;
+    private Collider2D playerCollider;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
     }
 
     void Update()
     {
         CharactersJump();
         CharactersMovement();
+        GetDown();
     }
 
     /// <summary>
@@ -63,5 +66,20 @@ public class SecondMovement : MonoBehaviour
         return Physics2D.OverlapCircle(feetPos.position, radius, layerMask);
     }
     #endregion
+
+    private void GetDown()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            StartCoroutine("ColliderClose");
+        }
+    }
+
+    private IEnumerator ColliderClose()
+    {
+        playerCollider.isTrigger = true;
+        yield return new WaitForSeconds(0.1f);
+        playerCollider.isTrigger = false;
+    }
 
 }
