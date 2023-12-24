@@ -8,8 +8,10 @@ public class Replace : MonoBehaviour
 {
     public Transform character1;
     public Transform character2;
-    public Vector3 characterPos1;
+    Vector3 characterPos1;
     int minute, seconds;
+
+    public float firstSwap, minSwapRate, maxSwapRate;
 
     [SerializeField] TextMeshProUGUI timer;
 
@@ -17,7 +19,7 @@ public class Replace : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("ChangePosition", 60f, Random.Range(30,60));
+        InvokeRepeating("ChangePosition", firstSwap, Random.Range(minSwapRate,maxSwapRate));
         //InvokeRepeating("ChangePosition", 60f,60f);  60 sn geçtikten sonra 60sn de bir karakterlerin yerleri deðiþecek.
     }
 
