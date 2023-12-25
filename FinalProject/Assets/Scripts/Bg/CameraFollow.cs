@@ -26,6 +26,7 @@ public class CameraFollow : MonoBehaviour
             Vector3 newPos2 = new Vector3(transform.position.x, target2.position.y, transform.position.z);
             transform.position = newPos2;
         }
+            // Eðer oyuncu hareketi olmazsa kamera hareket etmeye baþlayacak.
         
     }
 }
