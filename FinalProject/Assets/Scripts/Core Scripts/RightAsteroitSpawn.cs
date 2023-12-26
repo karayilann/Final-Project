@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroitSpawn : MonoBehaviour
+public class RightAsteroitSpawn : MonoBehaviour
 {
     public GameObject asteroitPrefab;
     public float spawnWait;
@@ -26,7 +26,7 @@ public class AsteroitSpawn : MonoBehaviour
             isSpawn = true;
             for (int i = 0; i < spawnCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(Random.Range(-8, -1), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
+                Vector3 spawnPosition = new Vector3(Random.Range(0.5f, 8.5f), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(asteroitPrefab, spawnPosition, spawnRotation);
 
@@ -35,7 +35,7 @@ public class AsteroitSpawn : MonoBehaviour
             isSpawn = false;
             yield return new WaitForSeconds(waveWait);
         }
-        
+
     }
 
 }
