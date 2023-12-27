@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 7249309207012847790}
   - component: {fileID: 3282930318955863315}
   - component: {fileID: 779186560860554936}
-  - component: {fileID: 3062285224443379126}
   - component: {fileID: 5788458799230001135}
   - component: {fileID: 3231766447173660694}
-  - component: {fileID: 5291484471537784023}
+  - component: {fileID: 6657893284297781710}
   m_Layer: 6
   m_Name: SpacePlatform
   m_TagString: Platform
@@ -116,58 +115,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!68 &3062285224443379126
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3172501506965980974}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 1.2553645, y: 0.26238942}
-  - {x: -1.0483416, y: 0.25645244}
-  - {x: -1.0612001, y: 0.15397173}
-  - {x: -0.9254337, y: 0.00923007}
-  - {x: -0.38712117, y: -0.13155834}
-  - {x: -0.21782613, y: -0.17275888}
-  - {x: 0.034614455, y: -0.1791042}
-  - {x: 0.42063442, y: -0.18880732}
-  - {x: 0.52799827, y: -0.15096235}
-  - {x: 0.6026719, y: -0.11780424}
-  - {x: 0.7124819, y: -0.05483564}
-  - {x: 1.2458909, y: 0.1488535}
-  - {x: 1.2528805, y: 0.2680226}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!251 &5788458799230001135
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -208,8 +155,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &5291484471537784023
-CapsuleCollider2D:
+--- !u!68 &6657893284297781710
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -240,6 +187,12 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.072899856, y: 0.024430308}
-  m_Size: {x: 2.3599591, y: 0.49325064}
-  m_Direction: 1
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.035773, y: 0.25561142}
+  - {x: 1.219184, y: 0.2545957}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class menuCodes : MonoBehaviour
@@ -7,8 +6,17 @@ public class menuCodes : MonoBehaviour
     public GameObject levelPaneli;
     public GameObject settings;
     public GameObject credits;
+    public GameObject mainMenu;
+
+    TextMover text;
+    public TextMeshProUGUI textMeshProUGUI;
 
     //public int levelIndex;
+
+    private void Start()
+    {
+        text = FindAnyObjectByType<TextMover>();
+    }
 
     public void PlayButton()
     {
@@ -24,13 +32,23 @@ public class menuCodes : MonoBehaviour
         credits.SetActive(false);
         settings.SetActive(true);
     }
-    
+
     public void CreditsButton()
     {
         levelPaneli.SetActive(false);
         credits.SetActive(true);
         settings.SetActive(false);
+        textMeshProUGUI.rectTransform.anchoredPosition = text.startingPosition;
     }
+
+    public void BackButton()
+    {
+        mainMenu.SetActive(true);
+        levelPaneli.SetActive(false);
+        credits.SetActive(false);
+        settings.SetActive(false);
+    }
+
 
     /*
     /// <summary>
