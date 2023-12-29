@@ -18,7 +18,7 @@ public class Background : MonoBehaviour
     {
         transform.Translate(Vector2.down * bgSpeed * Time.deltaTime);
 
-        if(transform.position.y <= -7.3)
+        if(transform.position.y <= -25f)
         {
             transform.position = startPos;
         }
