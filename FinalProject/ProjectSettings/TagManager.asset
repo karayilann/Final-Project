@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Wall
   - Player2
+  - BigPlatform
   layers:
   - Default
   - TransparentFX

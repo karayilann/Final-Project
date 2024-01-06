@@ -421,11 +421,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
---- !u!1 &1007683715 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 597871301135911357, guid: ed8127106fd8d0b49b9515f843985e0a, type: 3}
-  m_PrefabInstance: {fileID: 1195403144}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1043063118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6616049021689289394, guid: ed8127106fd8d0b49b9515f843985e0a, type: 3}
@@ -1273,7 +1268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1686913213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,12 +1276,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686913212}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25814f81c39bcbd4eab7438b9bfc4709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Follow: {fileID: 0}
+  Follow: {fileID: 582705213}
+  initialYPosition: 0
 --- !u!50 &1686913214
 Rigidbody2D:
   serializedVersion: 4
@@ -1654,7 +1650,7 @@ GameObject:
   - component: {fileID: 1960806540}
   m_Layer: 0
   m_Name: BigPlatformLeft
-  m_TagString: Untagged
+  m_TagString: BigPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1773,7 +1769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25814f81c39bcbd4eab7438b9bfc4709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Follow: {fileID: 1007683715}
+  Follow: {fileID: 1043063118}
+  initialYPosition: 0
 --- !u!50 &1960806540
 Rigidbody2D:
   serializedVersion: 4
