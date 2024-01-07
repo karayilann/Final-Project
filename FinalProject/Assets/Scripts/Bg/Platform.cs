@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    private Spawner spawnerScript;
-    private Spawner2 spawner2Script;
+    private Spawn spawnerScript;
+    private Spawn2 spawner2Script;
     private bool isTouched;
 
     void Start()
     {
-        spawnerScript = GameObject.Find("Game Manager").GetComponent<Spawner>();
-        spawner2Script = GameObject.Find("Game Manager").GetComponent<Spawner2>();
+        spawnerScript = GameObject.Find("Game Manager").GetComponent<Spawn>();
+        spawner2Script = GameObject.Find("Game Manager").GetComponent<Spawn2>();
         isTouched = false;
     }
 

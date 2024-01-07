@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class MovingPlatform2 : MonoBehaviour
 {
+
     private float movingDirection = 1f;
     private Spawn spawnerScript;
     private Spawn2 spawner2Script;
@@ -23,7 +24,7 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.Translate(movingDirection * Time.deltaTime, 0, 0);
 
-        if(transform.position.x > minX || transform.position.x < maxX)
+        if (transform.position.x < minX || transform.position.x > maxX)
         {
             movingDirection *= -1;
         }

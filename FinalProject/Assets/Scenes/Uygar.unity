@@ -220,6 +220,7 @@ Transform:
   - {fileID: 716017325}
   - {fileID: 883110460}
   - {fileID: 730449553}
+  - {fileID: 2118792379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &112886246
@@ -2436,6 +2437,8 @@ GameObject:
   - component: {fileID: 1328952053}
   - component: {fileID: 1328952052}
   - component: {fileID: 1328952054}
+  - component: {fileID: 1328952055}
+  - component: {fileID: 1328952056}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2450,7 +2453,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328952051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e62469d8c5bb049a35ec148473caca, type: 3}
   m_Name: 
@@ -2487,7 +2490,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328952051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5b1bfd2893ca940aa88bff0bfaf7c2, type: 3}
   m_Name: 
@@ -2501,6 +2504,62 @@ MonoBehaviour:
   maxX: 9.5
   minY: 1.5
   maxY: 2.5
+  platformCount2: 0
+--- !u!114 &1328952055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328952051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b67146bf27e80847828e9c71e17590c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - Prefab: {fileID: 6491581537941244726, guid: 3f47291d55ff04247b07f9101344e455, type: 3}
+    Chance: 0
+    weight: 0
+  - Prefab: {fileID: 2256142961982395081, guid: 4c1cc65e0ac6fbd418200c3e9f47940f, type: 3}
+    Chance: 100
+    weight: 0
+  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+    Chance: 0
+    weight: 0
+  minX: -1.5
+  maxX: -9.5
+  minY: 1.5
+  maxY: 2.5
+  numberOfPlatforms: 50
+  platformCount: 0
+--- !u!114 &1328952056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328952051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c388a3b9d82d44a596f7718cc322b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - Prefab: {fileID: 6491581537941244726, guid: 3f47291d55ff04247b07f9101344e455, type: 3}
+    Chance: 0
+    weight: 0
+  - Prefab: {fileID: 6907316059738902318, guid: b7580812cf3601c47b92eb19a8bf4650, type: 3}
+    Chance: 100
+    weight: 0
+  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+    Chance: 0
+    weight: 0
+  minX: 1.5
+  maxX: 9.5
+  minY: 1.5
+  maxY: 2.5
+  numberOfPlatforms: 50
   platformCount2: 0
 --- !u!1 &1538304959
 GameObject:
@@ -2537,12 +2596,13 @@ MonoBehaviour:
   jumpPower: 20
   jumpGravity: 5
   fallGravity: 15
-  movementSpeed: 10
   feetPos: {fileID: 594686988}
   radius: 0.3
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  bigPlatform: {fileID: 0}
+  LeftAsteroitSpawner: {fileID: 0}
 --- !u!50 &1538304961
 Rigidbody2D:
   serializedVersion: 4
@@ -2676,7 +2736,7 @@ Transform:
   m_GameObject: {fileID: 1538304959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.33, y: 2.6299996, z: 0}
+  m_LocalPosition: {x: -1.86, y: 2.6299996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3533,6 +3593,96 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2118792378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2118792379}
+  - component: {fileID: 2118792381}
+  - component: {fileID: 2118792380}
+  m_Layer: 0
+  m_Name: DestroyZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2118792379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118792378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -7.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 112886245}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118792380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118792378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3567f56d76599474e8641cd24f34614a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &2118792381
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118792378}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.42, y: 2.47}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
