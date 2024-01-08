@@ -38,7 +38,7 @@ public class menuCodes : MonoBehaviour
         levelPaneli.SetActive(false);
         credits.SetActive(true);
         settings.SetActive(false);
-        textMeshProUGUI.rectTransform.anchoredPosition = text.startingPosition;
+        textMeshProUGUI.rectTransform.anchoredPosition = new Vector2(0, -580.7f);
     }
 
     public void BackButton()

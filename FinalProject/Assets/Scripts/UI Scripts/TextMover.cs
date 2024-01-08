@@ -8,7 +8,7 @@ public class TextMover : MonoBehaviour
     float moveSpeed = 50f;  // Metnin hareket hýzý
     public Vector2 startingPosition;
 
-    private void Start()
+    private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         startingPosition = rectTransform.anchoredPosition;

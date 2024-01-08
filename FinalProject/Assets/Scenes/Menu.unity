@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02651247803581e4ebd3cf7ea5413bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPosition: {x: 0, y: 0}
+  startingPosition: {x: 0.1, y: 0}
 --- !u!1 &1402529778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,7 +1874,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 761077445}
         m_TargetAssemblyTypeName: menuCodes, Assembly-CSharp
-        m_MethodName: PlayButton
+        m_MethodName: CreditsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
