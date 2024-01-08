@@ -11,8 +11,6 @@ public class Movement : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private LayerMask layerMask;
 
-    [SerializeField] GameObject bigPlatform;  // asteroit yaðmuru olurken çýkan büyük platform
-    [SerializeField] GameObject LeftAsteroitSpawner;
     private Rigidbody2D rb2d;
     private Collider2D playerCollider;
 
@@ -22,8 +20,6 @@ public class Movement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
-        //bigPlatform.SetActive(false);
-        spawn = LeftAsteroitSpawner.GetComponentInChildren<AsteroitSpawn>();
     }
 
     void Update()
@@ -31,7 +27,6 @@ public class Movement : MonoBehaviour
         CharactersJump();
         CharactersMovement();
         GetDown();
-        bigPlatform.SetActive(spawn.isSpawn);
     }
 
 
