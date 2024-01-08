@@ -9,7 +9,7 @@ public class Replace : MonoBehaviour
     public Transform character1;
     public Transform character2;
     Vector3 characterPos1;
-    int minute, seconds;
+    public int minute, seconds;
 
     public float firstSwap, minSwapRate, maxSwapRate;
 

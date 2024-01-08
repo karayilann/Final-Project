@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
-        bigPlatform.SetActive(false);
+        //bigPlatform.SetActive(false);
         spawn = LeftAsteroitSpawner.GetComponentInChildren<AsteroitSpawn>();
     }
 

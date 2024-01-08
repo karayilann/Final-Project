@@ -10,11 +10,12 @@ TagManager:
   - Wall
   - Player2
   - BigPlatform
+  - Asteroit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Asteroit
   - Water
   - UI
   - Ground

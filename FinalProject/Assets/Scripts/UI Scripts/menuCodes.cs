@@ -49,6 +49,10 @@ public class menuCodes : MonoBehaviour
         settings.SetActive(false);
     }
 
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 
     /*
     /// <summary>
