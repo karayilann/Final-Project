@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 760457862666030277}
   - component: {fileID: 4079322426292567194}
   - component: {fileID: 63920055769521554}
-  - component: {fileID: 4659987463123352827}
-  - component: {fileID: 2895187581476694903}
+  - component: {fileID: 9126976558599320844}
+  - component: {fileID: 6670281215237693578}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -100,7 +100,7 @@ MonoBehaviour:
   minSwapRate: 30
   maxSwapRate: 60
   timer: {fileID: 0}
---- !u!114 &4659987463123352827
+--- !u!114 &9126976558599320844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,38 +109,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 1551177252835758149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5b1bfd2893ca940aa88bff0bfaf7c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b67146bf27e80847828e9c71e17590c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformPrefab:
-  - {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
-  - {fileID: 2256142961982395081, guid: 4c1cc65e0ac6fbd418200c3e9f47940f, type: 3}
-  - {fileID: 3172501506965980974, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
-  numberOfPlatforms: 200
-  minX: 0
-  maxX: 10
-  minY: 0.5
-  maxY: 2
-  platformCount2: 0
---- !u!114 &2895187581476694903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551177252835758149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e62469d8c5bb049a35ec148473caca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformPrefab:
-  - {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
-  - {fileID: 2256142961982395081, guid: 4c1cc65e0ac6fbd418200c3e9f47940f, type: 3}
-  - {fileID: 3172501506965980974, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
-  numberOfPlatforms: 200
-  minX: 0
-  maxX: 10
-  minY: 0.5
-  maxY: 2
+  enemies:
+  - Prefab: {fileID: 6491581537941244726, guid: 3f47291d55ff04247b07f9101344e455, type: 3}
+    Chance: 80
+    weight: 0
+  - Prefab: {fileID: 2256142961982395081, guid: 4c1cc65e0ac6fbd418200c3e9f47940f, type: 3}
+    Chance: 10
+    weight: 0
+  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+    Chance: 10
+    weight: 0
+  minX: -1.5
+  maxX: -9.5
+  minY: 1.5
+  maxY: 2.5
+  numberOfPlatforms: 49
   platformCount: 0
+--- !u!114 &6670281215237693578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c388a3b9d82d44a596f7718cc322b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - Prefab: {fileID: 6491581537941244726, guid: 3f47291d55ff04247b07f9101344e455, type: 3}
+    Chance: 80
+    weight: 0
+  - Prefab: {fileID: 6907316059738902318, guid: b7580812cf3601c47b92eb19a8bf4650, type: 3}
+    Chance: 10
+    weight: 0
+  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+    Chance: 10
+    weight: 0
+  minX: 1.5
+  maxX: 9.5
+  minY: 1.5
+  maxY: 2.5
+  numberOfPlatforms: 49
+  platformCount2: 0
