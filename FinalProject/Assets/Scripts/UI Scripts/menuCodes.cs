@@ -10,10 +10,16 @@ public class menuCodes : MonoBehaviour
 
     TextMover text;
     public TextMeshProUGUI textMeshProUGUI;
+    public TextMeshProUGUI highScore;
+    public TextMeshProUGUI coinScore;
 
     private void Start()
     {
         text = FindAnyObjectByType<TextMover>();
+        string scoreNumber = Score.oyuncuSkoru;
+        highScore.text = scoreNumber;
+        int coinNumber = Score.coinStash;
+        coinScore.text = coinNumber.ToString();
     }
 
     public void PlayButton()

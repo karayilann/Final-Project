@@ -43,7 +43,7 @@ public class AsteroitSpawn : MonoBehaviour
             cameraScript.isMoving = false;
             for (int i = 0; i < spawnCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(Random.Range(-8, 8.5f), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
+                Vector3 spawnPosition = new Vector3(Random.Range(-8, -1), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(asteroitPrefab, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);

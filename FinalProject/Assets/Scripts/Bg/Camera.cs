@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    private bool isStarted;
+    public bool isStarted;
     public bool isMoving;
     [SerializeField] float cameraSpeed;
     private Spawn spawnerScript;

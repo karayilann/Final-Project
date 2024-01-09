@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Background : MonoBehaviour
 {
-    [SerializeField] private float bgSpeed;
-
-    private Vector2 startPos;
+    [SerializeField] private GameObject backGround;
+    [SerializeField] private float bound;
 
     void Start()
     {
-        startPos = transform.position;
+        
     }
 
 
     void Update()
     {
-        transform.Translate(Vector2.down * bgSpeed * Time.deltaTime);
+       
 
-        if(transform.position.y <= -25f)
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Player2"))
         {
-            transform.position = startPos;
+            Instantiate(backGround, new Vector3(transform.position.x, transform.position.y + bound, transform.position.z), Quaternion.identity);
         }
-
     }
 }

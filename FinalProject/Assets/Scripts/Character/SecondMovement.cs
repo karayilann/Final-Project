@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SecondMovement : MonoBehaviour
@@ -11,15 +12,18 @@ public class SecondMovement : MonoBehaviour
     [SerializeField] private Transform feetPos;
     [SerializeField] private float radius;
     [SerializeField] private LayerMask layerMask;
+    public int coin2;
 
 
     private Rigidbody2D rb2d;
     private Collider2D playerCollider;
+    [SerializeField] TextMeshProUGUI scorCoin2;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        coin2 = 0;
     }
 
     void Update()
@@ -80,6 +84,16 @@ public class SecondMovement : MonoBehaviour
         playerCollider.isTrigger = true;
         yield return new WaitForSeconds(0.1f);
         playerCollider.isTrigger = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            coin2 += 1;
+            scorCoin2.text = coin2.ToString();
+            Destroy(collision.gameObject);
+        }
     }
 
 }

@@ -2,23 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class Replace : MonoBehaviour
 {
+    private Camera cameraScript;
     public Transform character1;
     public Transform character2;
     Vector3 characterPos1;
     public int minute, seconds;
+    private Movement movementScript;
+    private SecondMovement secondMovementScript;
+    private int totalCoin;
 
     public float firstSwap, minSwapRate, maxSwapRate;
 
     [SerializeField] TextMeshProUGUI timer;
+    
 
     float elapsedTime;
 
     private void Start()
     {
+        cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
+        movementScript = GameObject.Find("Character").GetComponent<Movement>();
+        secondMovementScript = GameObject.Find("Second Character").GetComponent<SecondMovement>();
         InvokeRepeating("ChangePosition", firstSwap, Random.Range(minSwapRate,maxSwapRate));
         //InvokeRepeating("ChangePosition", 60f,60f);  60 sn geçtikten sonra 60sn de bir karakterlerin yerleri deðiþecek.
     }
@@ -26,6 +34,9 @@ public class Replace : MonoBehaviour
     void Update()
     {
         Timer();
+        totalCoin = movementScript.coin + secondMovementScript.coin2;
+        
+        Score.coinStash = totalCoin;
     }
 
     /// <summary>
@@ -41,9 +52,19 @@ public class Replace : MonoBehaviour
 
     private void Timer()
     {
-        elapsedTime += Time.deltaTime;
-        minute = Mathf.FloorToInt(elapsedTime / 60);
-        seconds = Mathf.FloorToInt(elapsedTime % 60);
-        timer.text = string.Format("Time: {0:00}:{1:00}", minute, seconds);
+        if(cameraScript.isStarted == true)
+        {
+            elapsedTime += Time.deltaTime;
+            minute = Mathf.FloorToInt(elapsedTime / 60);
+            seconds = Mathf.FloorToInt(elapsedTime % 60);
+            timer.text = string.Format("Time: {0:00}:{1:00}", minute, seconds);
+            Score.oyuncuSkoru = timer.text;
+        }
+ 
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }

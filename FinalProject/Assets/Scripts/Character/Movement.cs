@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -11,9 +12,11 @@ public class Movement : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private LayerMask layerMask;
     public int levelUnlockSpace;
+    public int coin;
 
     private Rigidbody2D rb2d;
     private Collider2D playerCollider;
+    [SerializeField] TextMeshProUGUI scorCoin;
 
     AsteroitSpawn spawn;
     
@@ -22,6 +25,7 @@ public class Movement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         levelUnlockSpace = 0;
+        coin = 0;
     }
 
     void Update()
@@ -85,6 +89,16 @@ public class Movement : MonoBehaviour
         playerCollider.isTrigger = false;
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Coin"))
+        {
+            coin += 1;
+            scorCoin.text = coin.ToString();
+            Destroy(collision.gameObject);
+        }
+    }
+
+
 
 }
