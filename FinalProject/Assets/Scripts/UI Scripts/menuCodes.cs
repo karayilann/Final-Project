@@ -11,8 +11,6 @@ public class menuCodes : MonoBehaviour
     TextMover text;
     public TextMeshProUGUI textMeshProUGUI;
 
-    //public int levelIndex;
-
     private void Start()
     {
         text = FindAnyObjectByType<TextMover>();
@@ -20,10 +18,9 @@ public class menuCodes : MonoBehaviour
 
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
-        //settings.SetActive(false);
-        //credits.SetActive(false);
-        //levelPaneli.SetActive(true);
+        settings.SetActive(false);
+        credits.SetActive(false);
+        levelPaneli.SetActive(true);
     }
 
     public void SettingsButton()
@@ -54,14 +51,10 @@ public class menuCodes : MonoBehaviour
         Application.Quit();
     }
 
-    /*
-    /// <summary>
-    /// Farklý leveller eklendikten sonra burasý aktif edilecek.
-    /// </summary>
-    public void level1()
+    public void LoadLevel(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
     }
-    */
+
 
 }

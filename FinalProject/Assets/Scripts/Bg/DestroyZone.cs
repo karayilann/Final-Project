@@ -1,10 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyZone : MonoBehaviour
 {
     public GameObject losePanel;
+    bool isContinue;  // Oyunda ölünce yeniden baþladýðýnda sahneninde yeniden baþlamasý için
+
+    private void Update()
+    {
+        if (isContinue)
+        {
+            Time.timeScale = 1.0f;
+            isContinue = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Player2"))
@@ -18,4 +30,12 @@ public class DestroyZone : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        isContinue = true;
+    }
+
+
 }
