@@ -9,21 +9,31 @@ public class Camera : MonoBehaviour
     [SerializeField] float cameraSpeed;
     private Spawn spawnerScript;
     [SerializeField] float speedUp;
+    private int countPlus;
+ 
 
     void Start()
     {
         spawnerScript = GameObject.Find("Game Manager").GetComponent<Spawn>();
         isStarted = false;
         isMoving = true;
+        countPlus = 0;
 
     }
 
 
     void Update()
     {
+
         if(Input.anyKeyDown)
         {
             isStarted = true;
+        }
+
+        if (spawnerScript.platformCount == countPlus + 20)
+        {
+            cameraSpeed += speedUp;
+            countPlus = spawnerScript.platformCount;
         }
         
     }

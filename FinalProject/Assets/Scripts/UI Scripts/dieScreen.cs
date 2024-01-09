@@ -8,5 +8,6 @@ public class dieScreen : MonoBehaviour
     public void LoadLevel(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
+        Time.timeScale = 1.0f;
     }
 }

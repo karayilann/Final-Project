@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1551177252835758149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760457862666030277}
+  - component: {fileID: 4079322426292567194}
+  - component: {fileID: 63920055769521554}
+  - component: {fileID: 9126976558599320844}
+  - component: {fileID: 6670281215237693578}
+<<<<<<< HEAD:FinalProject/Assets/Prefabs/GeneralGame/GameManager.prefab
+  - component: {fileID: 55856074597277180}
+  - component: {fileID: 5757359325880816883}
+  - component: {fileID: 220188087725080538}
+=======
+  - component: {fileID: 5551965858072961736}
+>>>>>>> a6530a6f22a4562aa0723405c6eabdd4e5304664:FinalProject/Assets/Prefabs/GeneralGame/Game Manager.prefab
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760457862666030277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 233.0669, y: 529.6942, z: -0.12852655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4079322426292567194
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.034371674, y: -0.009360552}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1698567, y: 10.077322}
+  m_EdgeRadius: 0
+--- !u!114 &63920055769521554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88779f8cf3aeca41be66d3c528c1912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character1: {fileID: 0}
+  character2: {fileID: 0}
+  minute: 0
+  seconds: 0
+  firstSwap: 60
+  minSwapRate: 30
+  maxSwapRate: 60
+  timer: {fileID: 0}
+--- !u!114 &9126976558599320844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b67146bf27e80847828e9c71e17590c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - Prefab: {fileID: 3172501506965980974, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
+    Chance: 80
+    weight: 0
+  - Prefab: {fileID: 2256142961982395081, guid: 4c1cc65e0ac6fbd418200c3e9f47940f, type: 3}
+    Chance: 10
+    weight: 0
+  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+    Chance: 10
+    weight: 0
+  minX: -1.5
+  maxX: -9.5
+  minY: 1.5
+  maxY: 2.5
+  numberOfPlatforms: 49
+  platformCount: 0
+--- !u!114 &6670281215237693578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40c388a3b9d82d44a596f7718cc322b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - Prefab: {fileID: 3172501506965980974, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
+    Chance: 80
+    weight: 0
+  - Prefab: {fileID: 6907316059738902318, guid: b7580812cf3601c47b92eb19a8bf4650, type: 3}
+    Chance: 10
+    weight: 0
+  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+    Chance: 10
+    weight: 0
+  minX: 1.5
+  maxX: 9.5
+  minY: 1.5
+  maxY: 2.5
+  numberOfPlatforms: 49
+  platformCount2: 0
+<<<<<<< HEAD:FinalProject/Assets/Prefabs/GeneralGame/GameManager.prefab
+--- !u!114 &55856074597277180
+=======
+--- !u!114 &5551965858072961736
+>>>>>>> a6530a6f22a4562aa0723405c6eabdd4e5304664:FinalProject/Assets/Prefabs/GeneralGame/Game Manager.prefab
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14208cb1b10f35a42afa45a8f20d3ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+<<<<<<< HEAD:FinalProject/Assets/Prefabs/GeneralGame/GameManager.prefab
+--- !u!114 &5757359325880816883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f443dfced1d0c428ad0207b52ef205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - {fileID: 0}
+  eventWait: 5
+  nextEvent: 15
+  whichEvent: 0
+  isSpawnable: 0
+--- !u!114 &220188087725080538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551177252835758149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a1d68b154b60c4f90a3b9286661779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - {fileID: 0}
+  eventWait: 5
+  nextEvent: 15
+  whichEvent: 0
+  isSpawnable: 0
+=======
+>>>>>>> a6530a6f22a4562aa0723405c6eabdd4e5304664:FinalProject/Assets/Prefabs/GeneralGame/Game Manager.prefab

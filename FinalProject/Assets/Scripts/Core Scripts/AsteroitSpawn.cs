@@ -12,7 +12,7 @@ public class AsteroitSpawn : MonoBehaviour
     private Event eventScript;
     private Camera cameraScript;
     private Movement movementScript;
-    [SerializeField] private GameObject platform;
+    //[SerializeField] private GameObject platform;
 
     public bool isSpawn;
 
@@ -21,7 +21,7 @@ public class AsteroitSpawn : MonoBehaviour
         eventScript = GameObject.Find("Game Manager").GetComponent<Event>();
         cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
         movementScript = GameObject.Find("Character").GetComponent<Movement>();
-        platform.SetActive(false);
+        //platform.SetActive(false);
     }
 
     void Update()
@@ -39,17 +39,17 @@ public class AsteroitSpawn : MonoBehaviour
         while (eventScript.isSpawnable)
         {
             isSpawn = true;
-            platform.SetActive(true);
+            //platform.SetActive(true);
             cameraScript.isMoving = false;
             for (int i = 0; i < spawnCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(Random.Range(-8, -1), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
+                Vector3 spawnPosition = new Vector3(Random.Range(-8, 8.5f), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(asteroitPrefab, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
             isSpawn = false;
-            platform.SetActive(false);
+            //platform.SetActive(false);
             cameraScript.isMoving = true;
             movementScript.levelUnlockSpace += 1;
             //eventScript.isSpawnable = false;
