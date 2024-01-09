@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: c80445d3b425ee9408087ae5f9d0a9c1
   - enabled: 1
-    path: Assets/Scenes/GameSpaceTheme.unity
-    guid: 52e9b5ef72ab61f4d86691665ca4f9d4
+    path: Assets/Scenes/GameUnderSea.unity
+    guid: d6b9534386d5ad34ba11e20987b15759
   - enabled: 1
     path: Assets/Scenes/GameEgypt.unity
     guid: af6a0251c95aa1345b77a473be704a59
+  - enabled: 1
+    path: Assets/Scenes/GameSpaceTheme.unity
+    guid: 52e9b5ef72ab61f4d86691665ca4f9d4
   m_configObjects: {}

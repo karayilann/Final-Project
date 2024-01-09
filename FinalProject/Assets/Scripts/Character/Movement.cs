@@ -94,7 +94,7 @@ public class Movement : MonoBehaviour
         if(collision.gameObject.CompareTag("Coin"))
         {
             coin += 1;
-            scorCoin.text = coin.ToString();
+            scorCoin.text = "Skorunuz : " + coin.ToString();
             Destroy(collision.gameObject);
         }
     }

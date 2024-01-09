@@ -91,7 +91,7 @@ public class SecondMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Coin"))
         {
             coin2 += 1;
-            scorCoin2.text = coin2.ToString();
+            scorCoin2.text = "Skorunuz : " + coin2.ToString();
             Destroy(collision.gameObject);
         }
     }
