@@ -261,3 +261,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backGround: {fileID: 5112262838676369659}
+  bound: 80
