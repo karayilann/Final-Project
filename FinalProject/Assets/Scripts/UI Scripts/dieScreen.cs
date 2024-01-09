@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class dieScreen : MonoBehaviour
 {
+    // Denedik
     public void LoadLevel(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
