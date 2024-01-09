@@ -9,21 +9,38 @@ public class AsteroitSpawn : MonoBehaviour
     public int startSpawn;  // Spawnlamasý için oyun baþladýktan sonra beklemesi gereken süre
     public int spawnCount;  // her defada kaç tane asteroit gönderilecek
     public int waveWait;    // Asteroit yaðmuru olmadan önce beklemesi gereken süre
+    private Event eventScript;
+    private Camera cameraScript;
+    private Movement movementScript;
+    [SerializeField] private GameObject platform;
 
     public bool isSpawn;
 
-
-    void Start()
+    private void Start()
     {
-        StartCoroutine(SpawnAsteroit());
+        eventScript = GameObject.Find("Game Manager").GetComponent<Event>();
+        cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
+        movementScript = GameObject.Find("Character").GetComponent<Movement>();
+        platform.SetActive(false);
+    }
+
+    void Update()
+    {
+        if(eventScript.isSpawnable == true && eventScript.whichEvent == 0)
+        {
+            StartCoroutine(SpawnAsteroit());
+            
+        }
+        
     }
 
     IEnumerator SpawnAsteroit()
     {
-        yield return new WaitForSeconds(startSpawn);
-        while (true)
+        while (eventScript.isSpawnable)
         {
             isSpawn = true;
+            platform.SetActive(true);
+            cameraScript.isMoving = false;
             for (int i = 0; i < spawnCount; i++)
             {
                 Vector3 spawnPosition = new Vector3(Random.Range(-8, -1), transform.position.y, 0);  // x y ve z de nerelerde spawn olmasý gerektiðini yazdýk.
@@ -32,7 +49,11 @@ public class AsteroitSpawn : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             isSpawn = false;
-            yield return new WaitForSeconds(waveWait);
+            platform.SetActive(false);
+            cameraScript.isMoving = true;
+            movementScript.levelUnlockSpace += 1;
+            //eventScript.isSpawnable = false;
+
         }
         
     }

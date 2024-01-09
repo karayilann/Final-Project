@@ -24,6 +24,7 @@ public class Spawn : MonoBehaviour
     public float maxY = 2f;
     public int numberOfPlatforms;
     public int platformCount;
+  
 
     private Vector3 spawnPosition;
 
@@ -36,6 +37,7 @@ public class Spawn : MonoBehaviour
     private void Start()
     {
         platformCount = 0;
+
 
         spawnPosition = new Vector3();
 

@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Transform feetPos;
     [SerializeField] private float radius;
     [SerializeField] private LayerMask layerMask;
+    public int levelUnlockSpace;
 
     private Rigidbody2D rb2d;
     private Collider2D playerCollider;
@@ -20,6 +21,7 @@ public class Movement : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        levelUnlockSpace = 0;
     }
 
     void Update()
