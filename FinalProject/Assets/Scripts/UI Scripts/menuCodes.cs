@@ -14,6 +14,8 @@ public class menuCodes : MonoBehaviour
     public TextMeshProUGUI coinScore;
     public TextMeshProUGUI highScoreSea;
     public TextMeshProUGUI coinScoreSea;
+    public TextMeshProUGUI highScoreMýsýr;
+    public TextMeshProUGUI coinScoreMýsýr;
 
     private void Start()
     {
@@ -30,6 +32,11 @@ public class menuCodes : MonoBehaviour
         highScoreSea.text = scoreNumberSea;
         int coinNumberSea = Score.coinStashSea;
         coinScoreSea.text = coinNumberSea.ToString();
+
+        string scoreNumberMýsýr = Score.oyuncuSkoruMýsýr;
+        highScoreMýsýr.text = scoreNumberMýsýr;
+        int coinNumberMýsýr = Score.coinStashMýsýr;
+        coinScoreMýsýr.text = coinNumberMýsýr.ToString();
     }
 
     public void PlayButton()

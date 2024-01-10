@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb2d;
     private Collider2D playerCollider;
     [SerializeField] TextMeshProUGUI scorCoin;
+    [SerializeField] private GameObject deadPanel;
 
     AsteroitSpawn spawn;
     
@@ -26,6 +27,7 @@ public class Movement : MonoBehaviour
         playerCollider = GetComponent<Collider2D>();
         levelUnlockSpace = 0;
         coin = 0;
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -96,6 +98,12 @@ public class Movement : MonoBehaviour
             coin += 1;
             scorCoin.text = "Skorunuz : " + coin.ToString();
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Asteroit"))
+        {
+            deadPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

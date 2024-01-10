@@ -13,6 +13,7 @@ public class SecondMovement : MonoBehaviour
     [SerializeField] private float radius;
     [SerializeField] private LayerMask layerMask;
     public int coin2;
+    [SerializeField] private GameObject deadPanel;
 
 
     private Rigidbody2D rb2d;
@@ -24,6 +25,7 @@ public class SecondMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         coin2 = 0;
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -93,6 +95,12 @@ public class SecondMovement : MonoBehaviour
             coin2 += 1;
             scorCoin2.text = "Skorunuz : " + coin2.ToString();
             Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.CompareTag("Asteroit"))
+        {
+            deadPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

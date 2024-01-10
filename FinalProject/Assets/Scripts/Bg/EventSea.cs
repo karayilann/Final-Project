@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Event : MonoBehaviour
+public class EventSea : MonoBehaviour
 {
     [SerializeField] private GameObject[] events;
     [SerializeField] private float eventWait;
@@ -13,12 +13,12 @@ public class Event : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Select());
-        
+
     }
 
     private void Update()
     {
-        isSpawnable = false;
+        //isSpawnable = false;
 
     }
 
@@ -33,12 +33,11 @@ public class Event : MonoBehaviour
         yield return new WaitForSeconds(eventWait);
         while (true)
         {
-            
+
             whichEvent = GetRandomIndex();
             isSpawnable = true;
             yield return new WaitForSeconds(nextEvent);
         }
     }
-
 
 }

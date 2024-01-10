@@ -136,6 +136,10 @@ PrefabInstance:
       value: Second Character
       objectReference: {fileID: 0}
     - target: {fileID: 7126953191035648366, guid: f6c4b541478a1ef4bbbe9f62a6b0682f, type: 3}
+      propertyPath: deadPanel
+      value: 
+      objectReference: {fileID: 349571157}
+    - target: {fileID: 7126953191035648366, guid: f6c4b541478a1ef4bbbe9f62a6b0682f, type: 3}
       propertyPath: scorCoin2
       value: 
       objectReference: {fileID: 611197108}
@@ -371,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1408,6 +1412,10 @@ PrefabInstance:
       propertyPath: scorCoin
       value: 
       objectReference: {fileID: 132564840}
+    - target: {fileID: 4242295018047981091, guid: ed8127106fd8d0b49b9515f843985e0a, type: 3}
+      propertyPath: deadPanel
+      value: 
+      objectReference: {fileID: 349571157}
     - target: {fileID: 6616049021689289394, guid: ed8127106fd8d0b49b9515f843985e0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.92
@@ -2049,7 +2057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2118792379
 Transform:
   m_ObjectHideFlags: 0
