@@ -116,13 +116,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - Prefab: {fileID: 3172501506965980974, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
+  - Prefab: {fileID: 3172501506965980974, guid: 09f9982222396b8458aed5f9652e7c28, type: 3}
     Chance: 80
     weight: 0
-  - Prefab: {fileID: 2256142961982395081, guid: 4c1cc65e0ac6fbd418200c3e9f47940f, type: 3}
+  - Prefab: {fileID: 2256142961982395081, guid: 2f7b0d915e6dc9d489ae7239f2cf2cb6, type: 3}
     Chance: 10
     weight: 0
-  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+  - Prefab: {fileID: 2506245814680998456, guid: 175111871a93bd241a24331615c67408, type: 3}
     Chance: 10
     weight: 0
   minX: -1.5
@@ -144,13 +144,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - Prefab: {fileID: 3172501506965980974, guid: 185a30382fae4554aa8cecc28edf74eb, type: 3}
+  - Prefab: {fileID: 3172501506965980974, guid: 09f9982222396b8458aed5f9652e7c28, type: 3}
     Chance: 80
     weight: 0
-  - Prefab: {fileID: 6907316059738902318, guid: b7580812cf3601c47b92eb19a8bf4650, type: 3}
+  - Prefab: {fileID: 6907316059738902318, guid: 085187056fb605141a663acfbb237511, type: 3}
     Chance: 10
     weight: 0
-  - Prefab: {fileID: 2506245814680998456, guid: 45ade0057e0d0b04fa59cd82b66e72c6, type: 3}
+  - Prefab: {fileID: 2506245814680998456, guid: 175111871a93bd241a24331615c67408, type: 3}
     Chance: 10
     weight: 0
   minX: 1.5

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21742
+  controlID: 11343
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 21743
+  controlID: 11344
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21744
+  controlID: 11345
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -236,9 +236,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4082000064820000
-      m_LastClickedID: 33344
-      m_ExpandedIDs: cea8ffff26aaffffceaaffffcab7ffffb6b8ffffceeeffff96f9ffff16fbffffa4660000c8660000f27800003e7a0000627a00007c800000a080000098820000aa820000
+      m_SelectedIDs: a6f9ffff
+      m_LastClickedID: -1626
+      m_ExpandedIDs: d6f9ffff16fbffff60630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -659,9 +659,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 15.134645, y: 95.39839, z: -0.5486319}
+    m_Target: {x: -1.4760563, y: 1.1180555, z: -8.396569}
     speed: 2
-    m_Value: {x: 15.134645, y: 95.39839, z: -0.5486319}
+    m_Value: {x: -1.4760563, y: 1.1180555, z: -8.396569}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -711,9 +711,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 77.02406
+    m_Target: 8.004738
     speed: 2
-    m_Value: 77.02406
+    m_Value: 8.004738
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -881,7 +881,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Character
+    - Assets/Prefabs/GeneralGame
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Character
+  - Assets/Prefabs/GeneralGame
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\yazilimdosyalari\Unity\Final-Project\FinalProject
   m_LockTracker:
@@ -898,7 +898,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: d8620000
     m_LastClickedID: 25304
-    m_ExpandedIDs: 000000009e620000a0620000a2620000a4620000a6620000a8620000aa620000ae620000be62000000ca9a3b
+    m_ExpandedIDs: 00000000aa620000ac620000ae620000b0620000b2620000b4620000b6620000ca620000d062000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -926,7 +926,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e620000a0620000a2620000a4620000a6620000a8620000aa620000ae62000000ca9a3b
+    m_ExpandedIDs: 00000000aa620000ac620000ae620000b0620000b2620000b4620000b6620000ca620000d062000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -951,8 +951,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4082000064820000
-    m_LastClickedInstanceID: 33380
+    m_SelectedInstanceIDs: a6f9ffff
+    m_LastClickedInstanceID: -1626
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000929300009a61000004760000a6630000a2650000d0930000d69300000a690000
     m_RenameOverlay:
@@ -970,7 +970,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1052,7 +1052,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 33380
+  m_LastSelectedObjectID: -1626
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1113,8 +1113,9 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
+  m_ObjectsLockedBeforeSerialization:
+  - {fileID: 0}
+  m_InstanceIDsLockedBeforeSerialization: a6f9ffff
   m_PreviewResizer:
     m_CachedPref: 234
     m_ControlHash: -371814159
@@ -1124,5 +1125,5 @@ MonoBehaviour:
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
-    m_IsLocked: 0
+    m_IsLocked: 1
   m_PreviewWindow: {fileID: 0}
