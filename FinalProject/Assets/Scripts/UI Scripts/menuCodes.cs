@@ -17,6 +17,9 @@ public class menuCodes : MonoBehaviour
 
     private void Start()
     {
+        mainMenu.SetActive(true);
+        levelPaneli.SetActive(false);
+
         text = FindAnyObjectByType<TextMover>();
         string scoreNumber = Score.oyuncuSkoru;
         highScore.text = scoreNumber;
@@ -34,6 +37,7 @@ public class menuCodes : MonoBehaviour
         settings.SetActive(false);
         credits.SetActive(false);
         levelPaneli.SetActive(true);
+        mainMenu.SetActive(false);
     }
 
     public void SettingsButton()

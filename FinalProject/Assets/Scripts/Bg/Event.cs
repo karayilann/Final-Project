@@ -18,7 +18,7 @@ public class Event : MonoBehaviour
 
     private void Update()
     {
-        isSpawnable = false;
+        //isSpawnable = false;
 
     }
 

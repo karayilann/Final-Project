@@ -949,7 +949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &738988135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1048,6 +1048,8 @@ MonoBehaviour:
   textMeshProUGUI: {fileID: 1200653497}
   highScore: {fileID: 993690000}
   coinScore: {fileID: 1121596414}
+  highScoreSea: {fileID: 0}
+  coinScoreSea: {fileID: 0}
 --- !u!4 &761077446
 Transform:
   m_ObjectHideFlags: 0
