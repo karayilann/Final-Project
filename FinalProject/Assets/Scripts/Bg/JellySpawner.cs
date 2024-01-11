@@ -20,7 +20,7 @@ public class JellySpawner : MonoBehaviour
     {
         eventScript = GameObject.Find("Game Manager").GetComponent<EventSea>();
         cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
-        movementScript = GameObject.Find("Character").GetComponent<Movement>();
+        movementScript = GameObject.Find("Blue").GetComponent<Movement>();
         //jellyPrefab.SetActive(false);
         jellyCheck = false;
     }

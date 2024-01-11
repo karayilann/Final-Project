@@ -25,8 +25,8 @@ public class ReplaceEgypt : MonoBehaviour
     private void Start()
     {
         cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
-        movementScript = GameObject.Find("Character").GetComponent<Movement>();
-        secondMovementScript = GameObject.Find("Second Character").GetComponent<SecondMovement>();
+        movementScript = GameObject.Find("Blue").GetComponent<Movement>();
+        secondMovementScript = GameObject.Find("Pink").GetComponent<SecondMovement>();
         InvokeRepeating("ChangePosition", firstSwap, Random.Range(minSwapRate, maxSwapRate));
         //InvokeRepeating("ChangePosition", 60f,60f);  60 sn geçtikten sonra 60sn de bir karakterlerin yerleri deðiþecek.
     }

@@ -20,7 +20,7 @@ public class AsteroitSpawn : MonoBehaviour
     {
         eventScript = GameObject.Find("Game Manager").GetComponent<Event>();
         cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
-        movementScript = GameObject.Find("Character").GetComponent<Movement>();
+        movementScript = GameObject.Find("Blue").GetComponent<Movement>();
         //platform.SetActive(false);
     }
 

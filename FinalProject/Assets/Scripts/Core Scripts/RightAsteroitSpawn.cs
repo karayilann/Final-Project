@@ -20,7 +20,7 @@ public class RightAsteroitSpawn : MonoBehaviour
     {
         eventScript = GameObject.Find("Game Manager").GetComponent<Event2>();
         cameraScript = GameObject.Find("Main Camera").GetComponent<Camera>();
-        movementScript = GameObject.Find("Character").GetComponent<Movement>();
+        movementScript = GameObject.Find("Blue").GetComponent<Movement>();
     }
 
     void Update()
