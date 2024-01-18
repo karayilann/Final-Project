@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private GameObject idle;
     [SerializeField] private GameObject jump;
     [SerializeField] private GameObject fall;
+    public AudioSource deathSound;
     private SpriteRenderer spriteRenderer;
 
     AsteroitSpawn spawn;
@@ -134,6 +135,7 @@ public class Movement : MonoBehaviour
         {
             deadPanel.SetActive(true);
             Time.timeScale = 0;
+            deathSound.Play();
         }
     }
 

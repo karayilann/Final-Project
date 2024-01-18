@@ -14,6 +14,7 @@ public class SecondMovement : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     public int coin2;
     [SerializeField] private GameObject deadPanel;
+    public AudioSource deathSound2;
 
 
     private Rigidbody2D rb2d;
@@ -130,6 +131,7 @@ public class SecondMovement : MonoBehaviour
         if(collision.gameObject.CompareTag("Asteroit"))
         {
             deadPanel.SetActive(true);
+            deathSound2.Play();
             Time.timeScale = 0;
         }
     }
